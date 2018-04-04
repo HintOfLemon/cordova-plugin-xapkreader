@@ -74,7 +74,7 @@ public class DownloadNotification implements IDownloaderClient {
 
     @Override
     public void onDownloadStateChanged(int newState) {
-        if (null != mClientProxy) {
+        /*if (null != mClientProxy) {
             mClientProxy.onDownloadStateChanged(newState);
         }
         if (newState != mState) {
@@ -142,13 +142,13 @@ public class DownloadNotification implements IDownloaderClient {
 
             mCurrentNotification = mCustomNotification.updateNotification(mContext);
 
-            //mNotificationManager.notify(NOTIFICATION_ID, mCurrentNotification);
-        }
+            mNotificationManager.notify(NOTIFICATION_ID, mCurrentNotification);
+        }*/
     }
 
     @Override
     public void onDownloadProgress(DownloadProgressInfo progress) {
-        mProgressInfo = progress;
+        /*mProgressInfo = progress;
         if (null != mClientProxy) {
             mClientProxy.onDownloadProgress(progress);
         }
@@ -161,7 +161,7 @@ public class DownloadNotification implements IDownloaderClient {
         mCustomNotification.setTimeRemaining(progress.mTimeRemaining);
         mCurrentNotification = mCustomNotification.updateNotification(mContext);
 
-        //mNotificationManager.notify(NOTIFICATION_ID, mCurrentNotification);
+        mNotificationManager.notify(NOTIFICATION_ID, mCurrentNotification);*/
     }
 
     public interface ICustomNotification {
