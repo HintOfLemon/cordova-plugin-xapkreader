@@ -142,7 +142,7 @@ public class DownloadNotification implements IDownloaderClient {
 
             mCurrentNotification = mCustomNotification.updateNotification(mContext);
 
-            mNotificationManager.notify(NOTIFICATION_ID, mCurrentNotification);
+            //mNotificationManager.notify(NOTIFICATION_ID, mCurrentNotification);
         }
     }
 
@@ -161,7 +161,7 @@ public class DownloadNotification implements IDownloaderClient {
         mCustomNotification.setTimeRemaining(progress.mTimeRemaining);
         mCurrentNotification = mCustomNotification.updateNotification(mContext);
 
-        mNotificationManager.notify(NOTIFICATION_ID, mCurrentNotification);
+        //mNotificationManager.notify(NOTIFICATION_ID, mCurrentNotification);
     }
 
     public interface ICustomNotification {

@@ -56,12 +56,13 @@ public class XAPKDownloaderActivity extends Activity implements IDownloaderClien
  public static CordovaWebView cordovaWebView = null;
  
  // The file may have been delivered by Google Play --- let's make sure it exists and it's the size we expect.
- static public boolean validateFile (Context ctx, String fileName, long fileSize, boolean checkFileSize) {
+static public boolean validateFile (Context ctx, String fileName, long fileSize, boolean checkFileSize)
+{
   File fileForNewFile = new File(Helpers.generateSaveFileName(ctx, fileName));
   if (!fileForNewFile.exists()) return false;
   if ((checkFileSize == true) && (fileForNewFile.length() != fileSize)) return false;
   return true;
- }
+}
  
  // Determine whether we know if all the expansion files were delivered.
  boolean allExpansionFilesKnownAsDelivered (int[] versionList, long[] fileSizeList) {
