@@ -169,7 +169,7 @@ static public boolean validateFile (Context ctx, String fileName, long fileSize,
     mProgressDialog.setProgressNumberFormat("%1dMB / %2dMB");
    }
 
-   mProgressDialog.show ();
+   //mProgressDialog.show ();
    return;
 
   } catch (NameNotFoundException e) {
